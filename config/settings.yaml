@@ -1,0 +1,42 @@
+# Application Settings
+reddit:
+  subreddit: "wallstreetbets"
+  sort_by: "top"  # hot, new, top, rising
+  limit: 500
+  time_filter: "week"  # hour, day, week, month, year, all
+
+twitter:
+  search_terms:
+    - "$SPY"
+    - "$AAPL"
+    - "$TSLA"
+    - "$NVDA"
+    - "stock market"
+    - "buy calls"
+    - "puts"
+  max_tweets: 500
+  include_retweets: false
+
+sentiment:
+  model: "vader"  # vader, textblob, transformers
+  threshold: 0.1
+  language: "en"
+
+analysis:
+  window_hours: 168  # 7 days
+  min_mentions: 3
+  weight_reddit: 0.9
+  weight_twitter: 0.1
+
+database:
+  name: "stock_sentiment.db"
+  backup_interval_hours: 24
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/sentiment_analysis.log"
+
+scheduling:
+  run_interval_minutes: 60
+  cleanup_old_data_days: 30
