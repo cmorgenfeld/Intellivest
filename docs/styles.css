@@ -303,6 +303,12 @@ a:hover {
     padding: 2rem;
     box-shadow: var(--shadow-xl);
     border: 1px solid var(--border-color);
+    height: 400px;
+}
+
+.chart-container canvas {
+    height: 300px !important;
+    max-height: 300px !important;
 }
 
 /* Section Headers */
@@ -529,6 +535,11 @@ a:hover {
 
 .demo-chart {
     padding: 2rem;
+}
+
+.demo-chart canvas {
+    height: 300px !important;
+    max-height: 300px !important;
 }
 
 .rankings-list {

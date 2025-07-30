@@ -111,6 +111,10 @@ function initializeSentimentChart() {
     const ctx = document.getElementById('sentimentChart');
     if (!ctx) return;
 
+    // Set fixed dimensions
+    ctx.width = 400;
+    ctx.height = 300;
+
     sentimentChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -190,6 +194,10 @@ function initializeSentimentChart() {
 function initializeDemoChart() {
     const ctx = document.getElementById('demoChart');
     if (!ctx) return;
+
+    // Set fixed dimensions
+    ctx.width = 400;
+    ctx.height = 300;
 
     demoChart = new Chart(ctx, {
         type: 'line',
