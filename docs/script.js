@@ -281,7 +281,8 @@ function populateStockRankings() {
 
     rankingsContainer.innerHTML = '';
     
-    mockData.rankings.slice(0, 6).forEach((stock, index) => {
+    // Limit to top 5 rankings for cleaner presentation
+    mockData.rankings.slice(0, 5).forEach((stock, index) => {
         const rankingItem = document.createElement('div');
         rankingItem.className = 'ranking-item fade-in-up';
         rankingItem.style.animationDelay = `${index * 0.1}s`;
