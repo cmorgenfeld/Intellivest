@@ -112,3 +112,11 @@ config/api_keys.env
 # Temporary files
 *.tmp
 *.temp
+
+# Jekyll and GitHub Pages
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/

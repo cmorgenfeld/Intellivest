@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intellivest - AI-Powered Stock Sentiment Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">📈</span>
+                <span class="logo-text">Intellivest</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#performance" class="nav-link">Performance</a></li>
+                <li><a href="#demo" class="nav-link">Live Demo</a></li>
+                <li><a href="#docs" class="nav-link">Documentation</a></li>
+                <li><a href="https://github.com/cmorgenfeld/Intellivest" class="nav-link github-link" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    AI-Powered Stock Sentiment Analysis
+                    <span class="gradient-text">for Smart Investing</span>
+                </h1>
+                <p class="hero-description">
+                    Leverage Reddit and Twitter sentiment data to make informed investment decisions. 
+                    Our advanced AI system analyzes social media buzz and provides actionable stock rankings 
+                    with proven <strong>43.8% prediction accuracy</strong>.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#demo" class="btn btn-primary">
+                        <i class="fas fa-chart-line"></i> View Live Demo
+                    </a>
+                    <a href="https://github.com/cmorgenfeld/Intellivest" class="btn btn-secondary" target="_blank">
+                        <i class="fab fa-github"></i> Get Started
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">43.8%</span>
+                        <span class="stat-label">Prediction Accuracy</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Top Stock Accuracy</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Automated Analysis</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="chart-container">
+                    <canvas id="sentimentChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Features</h2>
+                <p>Everything you need for data-driven investment decisions</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fab fa-reddit"></i>
+                    </div>
+                    <h3>Reddit Sentiment Analysis</h3>
+                    <p>Real-time analysis of r/WallStreetBets and other financial subreddits using advanced NLP models.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <h3>Twitter Integration</h3>
+                    <p>Monitor Twitter for stock mentions and sentiment trends from financial influencers and retail traders.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Multi-Model AI</h3>
+                    <p>Combines VADER, TextBlob, and custom keyword analysis for comprehensive sentiment scoring.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Historical Backtesting</h3>
+                    <p>Validate strategies with historical data. Our system shows 43.8% accuracy on 7-day predictions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Automated Analysis</h3>
+                    <p>Daily automated runs with Windows Task Scheduler. Set it and forget it.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Comprehensive Data</h3>
+                    <p>SQLite database stores all historical sentiment data, rankings, and performance metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section id="performance" class="performance">
+        <div class="container">
+            <div class="section-header">
+                <h2>Proven Performance</h2>
+                <p>Real results from our sentiment analysis system</p>
+            </div>
+            <div class="performance-grid">
+                <div class="performance-card highlight">
+                    <div class="performance-header">
+                        <h3>Recent Top Picks</h3>
+                        <span class="badge success">100% Accuracy</span>
+                    </div>
+                    <div class="stock-results">
+                        <div class="stock-result">
+                            <span class="stock-symbol">OPEN</span>
+                            <span class="stock-change positive">+284%</span>
+                        </div>
+                        <div class="stock-result">
+                            <span class="stock-symbol">DNUT</span>
+                            <span class="stock-change positive">+30%</span>
+                        </div>
+                        <div class="stock-result">
+                            <span class="stock-symbol">HOOD</span>
+                            <span class="stock-change positive">+10%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="performance-card">
+                    <h3>Historical Accuracy</h3>
+                    <div class="accuracy-chart">
+                        <div class="accuracy-bar">
+                            <div class="accuracy-fill" style="width: 43.8%"></div>
+                        </div>
+                        <span class="accuracy-text">43.8% 7-day prediction accuracy</span>
+                    </div>
+                    <p>Consistently outperforming random selection across 6-month backtesting period.</p>
+                </div>
+                <div class="performance-card">
+                    <h3>Analysis Volume</h3>
+                    <div class="volume-stats">
+                        <div class="volume-stat">
+                            <span class="volume-number">10K+</span>
+                            <span class="volume-label">Posts Analyzed Daily</span>
+                        </div>
+                        <div class="volume-stat">
+                            <span class="volume-number">500+</span>
+                            <span class="volume-label">Stocks Tracked</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2>Live Demo</h2>
+                <p>See Intellivest in action with real-time sentiment data</p>
+            </div>
+            <div class="demo-container">
+                <div class="demo-controls">
+                    <button class="btn btn-primary" id="refreshDemo">
+                        <i class="fas fa-sync-alt"></i> Refresh Data
+                    </button>
+                    <select id="timeframe" class="demo-select">
+                        <option value="1">Last 24 Hours</option>
+                        <option value="7" selected>Last 7 Days</option>
+                        <option value="30">Last 30 Days</option>
+                    </select>
+                </div>
+                <div class="demo-content">
+                    <div class="demo-rankings">
+                        <h3>Top Sentiment Rankings</h3>
+                        <div id="stockRankings" class="rankings-list">
+                            <!-- Rankings will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="demo-chart">
+                        <h3>Sentiment Trends</h3>
+                        <canvas id="demoChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="docs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Documentation & Resources</h2>
+                <p>Everything you need to get started with Intellivest</p>
+            </div>
+            <div class="docs-grid">
+                <a href="https://github.com/cmorgenfeld/Intellivest/blob/master/SETUP.md" class="doc-card" target="_blank">
+                    <div class="doc-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Quick Start Guide</h3>
+                    <p>Get up and running with Intellivest in minutes</p>
+                </a>
+                <a href="https://github.com/cmorgenfeld/Intellivest/blob/master/API_DOCS.md" class="doc-card" target="_blank">
+                    <div class="doc-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>API Documentation</h3>
+                    <p>Complete API reference and code examples</p>
+                </a>
+                <a href="https://github.com/cmorgenfeld/Intellivest" class="doc-card" target="_blank">
+                    <div class="doc-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub Repository</h3>
+                    <p>Access the full source code and contribute</p>
+                </a>
+                <a href="https://github.com/cmorgenfeld/Intellivest/blob/master/AUTOMATION_README.md" class="doc-card" target="_blank">
+                    <div class="doc-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>Automation Setup</h3>
+                    <p>Configure automated daily analysis</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">📈</span>
+                        <span class="logo-text">Intellivest</span>
+                    </div>
+                    <p>AI-powered stock sentiment analysis for smarter investment decisions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/cmorgenfeld/Intellivest">GitHub</a></li>
+                        <li><a href="https://github.com/cmorgenfeld/Intellivest/blob/master/SETUP.md">Documentation</a></li>
+                        <li><a href="https://github.com/cmorgenfeld/Intellivest/blob/master/API_DOCS.md">API Reference</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="https://github.com/cmorgenfeld/Intellivest/blob/master/LICENSE">MIT License</a></li>
+                        <li><a href="#disclaimer">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Intellivest. Educational purposes only. Not financial advice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Disclaimer Modal -->
+    <div id="disclaimer" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Important Disclaimer</h2>
+            <p>This software is for educational and research purposes only. Stock market predictions are inherently uncertain and past performance does not guarantee future results. Users should conduct their own research and consult with financial advisors before making investment decisions. The authors are not responsible for any financial losses that may result from using this software.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

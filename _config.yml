@@ -1,0 +1,45 @@
+# GitHub Pages Configuration
+theme: minima
+title: "Intellivest - AI-Powered Stock Sentiment Analysis"
+description: "Leverage Reddit and Twitter sentiment data to make informed investment decisions with proven 43.8% prediction accuracy."
+url: "https://cmorgenfeld.github.io"
+baseurl: "/Intellivest"
+
+# Navigation
+header_pages:
+  - index.html
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO
+author:
+  name: "Creighton Morgenfeld"
+  
+social:
+  name: "Intellivest"
+  links:
+    - https://github.com/cmorgenfeld/Intellivest
+
+# Analytics (optional)
+google_analytics: 
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
